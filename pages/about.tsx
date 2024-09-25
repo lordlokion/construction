@@ -73,7 +73,7 @@ const TeamMemberCard = ({ member }) => (
   </Card>
 )
 
-const CompanyValueCard = ({ value, index }) => (
+const CompanyValueCard = ({ value }) => (
   <Card className="bg-gray-800 text-primary-foreground">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -256,7 +256,7 @@ export default function AboutPage() {
         <section className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's bring your vision to life. Our team of experts is ready to help you create exceptional spaces that inspire and endure.
+            Lets bring your vision to life. Our team of experts is ready to help you create exceptional spaces that inspire and endure.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">Contact Us Today</Link>

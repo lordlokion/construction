@@ -2,9 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Image, Calendar, User } from 'lucide-react'
+import {Calendar, User } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -37,7 +38,7 @@ const ProjectCard = ({ project, index }) => (
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className="bg-white rounded-lg shadow-md overflow-hidden"
   >
-    <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
+    <Image src={project.image} alt={project.title} width={500} height={500} className="w-full h-40 object-cover" />
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
       <p className="text-gray-600 mb-4">{project.description}</p>

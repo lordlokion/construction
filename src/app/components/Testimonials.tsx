@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 interface Testimonial {
   name: string;
@@ -26,10 +27,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, text, photo, in
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       {photo && (
-        <img 
+        <Image 
           src={photo} 
           alt={name} 
           className="w-16 h-16 rounded-full mb-4 object-cover" 
+          width={500}
+          height={500}
         />
       )}
       <p className="text-gray-600 mb-4">{text}</p>
@@ -46,17 +49,17 @@ const ClientTestimonials: React.FC = () => {
     {
       name: "John Doe",
       text: "Amazing service! Highly recommend for anyone looking for reliable and professional work.",
-      photo: "https://via.placeholder.com/100" // Placeholder image URL
+      photo: "/1.jpeg" // Placeholder image URL
     },
     {
       name: "Jane Smith",
       text: "The team exceeded my expectations. The attention to detail and customer care was exceptional.",
-      photo: "https://via.placeholder.com/100" // Placeholder image URL
+      photo: "/1.jpeg" // Placeholder image URL
     },
     {
       name: "Alice Johnson",
       text: "Fantastic experience from start to finish. The quality of work was top-notch and the process was seamless.",
-      photo: "https://via.placeholder.com/100" // Placeholder image URL
+      photo: "/1.jpeg" // Placeholder image URL
     }
   ];
 

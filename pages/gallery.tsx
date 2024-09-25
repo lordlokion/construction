@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
 const galleryImages = [
   "/img1.jpeg",
@@ -11,18 +14,17 @@ const galleryImages = [
   "/img7.jpeg",
   "/img9.jpeg",
   "/img10.jpeg",
-
 ];
 
 const GalleryPage = () => {
   return (
-    
     <div className="min-h-screen bg-gray-100 p-2">
-        <header className="bg-gray-800 text-white py-20">
+      <Header />
+      <header className="bg-gray-800 text-white py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-2">Gallery</h1>
           <p className="text-center">
-            <span className="text-gray-400">Home</span>{' '}
+            <span className="text-gray-400">Home</span>{" "}
             <span className="text-orange-500">/ Gallery</span>
           </p>
         </div>
@@ -40,8 +42,10 @@ const GalleryPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <img
+              <Image
                 src={src}
+                width={500}
+                height={500}
                 alt={`Gallery Image ${index + 1}`}
                 className="w-full h-full object-cover"
               />
@@ -50,14 +54,15 @@ const GalleryPage = () => {
         ))}
       </motion.div>
       <Link href="/">
-        <motion.button
-          className="mt-8 bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Back to Home
-        </motion.button>
-      </Link>
+    <motion.button
+            className="bg-orange-500 mt-12 mb-12 mx-auto item-center justify-between text-white px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      Back to Home
+    </motion.button>
+  </Link>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { Mail, Phone, MapPin } from 'lucide-react'
@@ -25,7 +24,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
             <p className="text-gray-600 mb-6">
-              We'd love to hear from you! Whether you have a question, feedback, or just want to get in touch, feel free to reach out.
+              Wed love to hear from you! Whether you have a question, feedback, or just want to get in touch, feel free to reach out.
             </p>
             
             <form className="bg-white rounded-lg shadow-md p-6">

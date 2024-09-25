@@ -115,7 +115,7 @@ export default function ServicesPage() {
           <h2 className="text-3xl font-bold text-center mb-2">Why Choose Om Namo Siwai</h2>
           <div className="w-16 h-1 bg-orange-500 mx-auto mb-8"></div>
           <p className="text-center text-gray-400 mb-12">
-            When you choose Om Namo Siwai, you're choosing a partner you can trust
+            When you choose Om Namo Siwai, youre choosing a partner you can trust
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whyChooseUs.map((feature, index) => (

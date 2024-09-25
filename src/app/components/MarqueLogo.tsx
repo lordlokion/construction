@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const logos = [
   {
@@ -46,7 +47,7 @@ const logos = [
 ];
 
 export default function MarqueeLogoWall() {
-  const [isVertical, setIsVertical] = useState(false);
+  const [isVertical] = useState(false);
 
   return (
     <div
@@ -74,7 +75,7 @@ export default function MarqueeLogoWall() {
                 key={logo.id}
                 className="w-24 h-24 md:w-48 md:h-48 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-md p-4"
               >
-                <img src={logo.src} alt={logo.id} className="w-full h-full object-contain" />
+                <Image src={logo.src} width={500} height={500} alt={logo.id} className="w-full h-full object-contain" />
               </div>
             ))}
           </div>
@@ -89,7 +90,7 @@ export default function MarqueeLogoWall() {
                 key={`${logo.id}-copy`}
                 className="w-24 h-24 md:w-48 md:h-48 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-md p-4"
               >
-                <img src={logo.src} alt={logo.id} className="w-full h-full object-contain" />
+                <Image src={logo.src} width={500} height={500} alt={logo.id} className="w-full h-full object-contain" />
               </div>
             ))}
           </div>
