@@ -67,7 +67,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Claire Davis",
     role: "Project Manager",
-    bio: "Claire's exceptional organizational skills and dedication ensure projects run smoothly and efficiently.",
+    bio: "Claires exceptional organizational skills and dedication ensure projects run smoothly and efficiently.",
     icon: <User className="w-8 h-8" />,
   },
 ];
@@ -293,7 +293,7 @@ export default function AboutPage() {
                 From humble beginnings to becoming a leader in infrastructure
                 development, the DBL journey is a testament to our commitment,
                 innovation, and relentless pursuit of excellence. Discover how
-                we've grown and evolved over the years, shaping India's
+                weve grown and evolved over the years, shaping Indias
                 infrastructure landscape.
               </p>
               <Link href="/projects" className="text-blue-600 font-semibold">
@@ -417,7 +417,7 @@ export default function AboutPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's bring your vision to life. Our team of experts is ready to
+            Lets bring your vision to life. Our team of experts is ready to
             help you create exceptional spaces that inspire and endure.
           </p>
           <Button size="lg" asChild>
