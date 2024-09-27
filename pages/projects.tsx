@@ -2,36 +2,49 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import {Calendar, User } from 'lucide-react'
+import { Calendar, User } from 'lucide-react'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import Image from 'next/image'
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  date: string;
+  client: string;
+  image: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Urban Loft Renovation',
     description: 'A contemporary renovation project that transformed a dated loft into a modern urban retreat.',
     date: 'March 2024',
     client: 'Sarah Lee',
-    image: '/3.jpg' // Replace with actual image path
+    image: '/3.jpg'
   },
   {
     title: 'Greenfield Housing Development',
     description: 'A large-scale housing project featuring eco-friendly designs and sustainable materials.',
     date: 'July 2023',
     client: 'Greenfield Ltd.',
-    image: '/22.jpg' // Replace with actual image path
+    image: '/22.jpg'
   },
   {
     title: 'Downtown Office Building',
     description: 'A sleek and functional office building designed to meet the needs of modern businesses.',
     date: 'November 2022',
     client: 'TechCorp Inc.',
-    image: '/1.jpg' // Replace with actual image path
+    image: '/1.jpg'
   }
 ]
 
-const ProjectCard = ({ project, index }) => (
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}

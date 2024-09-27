@@ -5,7 +5,20 @@ import { Building2, PaintBucket, Hammer, Ruler, Truck, HardHat, Users, Shield, H
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 
-const services = [
+interface Service {
+  id: string;
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface Feature {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const services: Service[] = [
   {
     id: 'architectural-design',
     icon: <Building2 />,
@@ -44,7 +57,7 @@ const services = [
   }
 ]
 
-const whyChooseUs = [
+const whyChooseUs: Feature[] = [
   {
     icon: <Users />,
     title: 'Expertise and Experience',
@@ -62,14 +75,14 @@ const whyChooseUs = [
   }
 ]
 
-const ServiceCard = ({ service }) => (
+const ServiceCard: React.FC<{ service: Service }> = ({ service }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
   >
     <div className="p-6">
       <div className="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
-        {React.cloneElement(service.icon, { className: "w-6 h-6 text-orange-500" })}
+        {React.cloneElement(service.icon as React.ReactElement, { className: "w-6 h-6 text-orange-500" })}
       </div>
       <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -80,13 +93,13 @@ const ServiceCard = ({ service }) => (
   </motion.div>
 )
 
-const FeatureCard = ({ feature }) => (
+const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     className="bg-gray-800 rounded-lg p-6 text-white"
   >
     <div className="flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4">
-      {React.cloneElement(feature.icon, { className: "w-8 h-8 text-white" })}
+      {React.cloneElement(feature.icon as React.ReactElement, { className: "w-8 h-8 text-white" })}
     </div>
     <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
     <p className="text-gray-400">{feature.description}</p>

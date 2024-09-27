@@ -3,12 +3,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Building2, PaintBucket, Hammer, Ruler, Truck, HardHat, Check } from 'lucide-react'
+import { ArrowLeft, Building2, PaintBucket, Hammer, Ruler, Truck, HardHat, Check, LucideIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const iconComponents = {
+const iconComponents: { [key: string]: LucideIcon } = {
   Building2,
   PaintBucket,
   Hammer,
@@ -17,7 +17,17 @@ const iconComponents = {
   HardHat
 }
 
-const ServicePage = ({ service }) => {
+interface Service {
+  id: string;
+  iconName: keyof typeof iconComponents;
+  title: string;
+  description: string;
+  whyChoose: string[];
+  process: string[];
+  features: string[];
+}
+
+const ServicePage: React.FC<{ service: Service }> = ({ service }) => {
   const IconComponent = iconComponents[service.iconName]
 
   return (
@@ -63,7 +73,7 @@ const ServicePage = ({ service }) => {
                 <section>
                   <h3 className="text-2xl font-semibold mb-4 text-gray-800">Why Choose Our Service</h3>
                   <ul className="space-y-2">
-                    {service.whyChoose.map((item, index) => (
+                    {service.whyChoose.map((item: string, index: number) => (
                       <motion.li 
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -88,7 +98,7 @@ const ServicePage = ({ service }) => {
               </CardHeader>
               <CardContent>
                 <ol className="space-y-4">
-                  {service.process.map((step, index) => (
+                  {service.process.map((step: string, index: number) => (
                     <motion.li 
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -112,7 +122,7 @@ const ServicePage = ({ service }) => {
               </CardHeader>
               <CardContent>
                 <ul className="grid grid-cols-1 gap-4">
-                  {service.features.map((feature, index) => (
+                  {service.features.map((feature: string, index: number) => (
                     <motion.li 
                       key={index}
                       initial={{ opacity: 0, scale: 0.9 }}

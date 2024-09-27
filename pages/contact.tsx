@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows={4}
                   required
                   className="w-full p-3 border border-gray-300 rounded-lg"
                 ></textarea>
@@ -97,13 +97,12 @@ export default function ContactPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <h2 className="text-3xl font-bold text-center p-6">Find Us on the Map</h2>
               <div className="w-full h-64">
-                {/* Replace with actual embed code from Google Maps or another mapping service */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.174099874048!2d-122.42180868468018!3d37.774929779759555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d1b2e3e4d%3A0x459d7d40e5f5600!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094175!5e0!3m2!1sen!2sus!4v1630636934973!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen={true}
                   loading="lazy"
                 ></iframe>
               </div>

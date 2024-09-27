@@ -1,15 +1,56 @@
-"use client"
+"use client";
 
-import React from "react"
-import { motion } from "framer-motion"
-import { User, Award, Globe, MapPin, Briefcase, Users, Zap, Info, Eye, Target } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import Header from "@/app/components/Header"
-import Footer from "@/app/components/Footer"
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  User,
+  Award,
+  Globe,
+  MapPin,
+  Briefcase,
+  Users,
+  Zap,
+  Info,
+  Eye,
+  Target,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
-const teamMembers = [
+interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  icon: React.ReactNode;
+}
+
+interface CompanyValue {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface Achievement {
+  number: string;
+  label: string;
+}
+
+interface FuturisticCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+}
+
+interface CompanyValueCardProps {
+  value: CompanyValue;
+  index: number;
+}
+
+const teamMembers: TeamMember[] = [
   {
     name: "Alice Johnson",
     role: "Founder & CEO",
@@ -28,9 +69,9 @@ const teamMembers = [
     bio: "Claire's exceptional organizational skills and dedication ensure projects run smoothly and efficiently.",
     icon: <User className="w-8 h-8" />,
   },
-]
+];
 
-const companyValues = [
+const companyValues: CompanyValue[] = [
   {
     icon: <Award className="w-12 h-12" />,
     title: "Award-Winning Excellence",
@@ -49,16 +90,16 @@ const companyValues = [
     description:
       "We are dedicated to supporting and improving the communities we work in, making a positive impact wherever we go.",
   },
-]
+];
 
-const achievements = [
+const achievements: Achievement[] = [
   { number: "500+", label: "Projects Completed" },
   { number: "50+", label: "Awards Won" },
   { number: "20+", label: "Years of Experience" },
   { number: "100%", label: "Client Satisfaction" },
-]
+];
 
-const TeamMemberCard = ({ member }) => (
+const TeamMemberCard = ({ member }: { member: TeamMember }) => (
   <Card>
     <CardContent className="p-6 text-center">
       <div className="mb-4">
@@ -71,9 +112,9 @@ const TeamMemberCard = ({ member }) => (
       <p className="text-muted-foreground">{member.bio}</p>
     </CardContent>
   </Card>
-)
+);
 
-const CompanyValueCard = ({ value }) => (
+const CompanyValueCard = ({ value }: CompanyValueCardProps) => (
   <Card className="bg-gray-800 text-primary-foreground">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -83,9 +124,9 @@ const CompanyValueCard = ({ value }) => (
       <p className="text-primary-foreground/80">{value.description}</p>
     </CardContent>
   </Card>
-)
+);
 
-const AchievementCard = ({ achievement }) => (
+const AchievementCard = ({ achievement }: { achievement: Achievement }) => (
   <Card>
     <CardContent className="p-6 text-center">
       <CardTitle className="text-3xl font-bold text-orange-500 mb-2">
@@ -94,9 +135,14 @@ const AchievementCard = ({ achievement }) => (
       <p className="text-muted-foreground">{achievement.label}</p>
     </CardContent>
   </Card>
-)
+);
 
-const FuturisticCard = ({ title, description, icon, color }) => (
+const FuturisticCard = ({
+  title,
+  description,
+  icon,
+  color,
+}: FuturisticCardProps) => (
   <Card className={`overflow-hidden ${color}`}>
     <CardHeader className="pb-2">
       <div className="flex items-center justify-between">
@@ -108,7 +154,7 @@ const FuturisticCard = ({ title, description, icon, color }) => (
       <p className="text-sm">{description}</p>
     </CardContent>
   </Card>
-)
+);
 
 export default function AboutPage() {
   return (
@@ -120,7 +166,10 @@ export default function AboutPage() {
           <nav className="text-center" aria-label="Breadcrumb">
             <ol className="inline-flex">
               <li>
-                <Link href="/" className="text-primary-foreground/80 hover:text-primary-foreground">
+                <Link
+                  href="/"
+                  className="text-primary-foreground/80 hover:text-primary-foreground"
+                >
                   Home
                 </Link>
               </li>
@@ -192,9 +241,12 @@ export default function AboutPage() {
         <section className="mb-16">
           <Card className="bg-gray-800 text-primary-foreground">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-center mb-4">Our Core Values</h2>
+              <h2 className="text-3xl font-bold text-center mb-4">
+                Our Core Values
+              </h2>
               <p className="text-center text-primary-foreground/80 mb-12 max-w-3xl mx-auto">
-                Our core values define who we are and guide us in every project we undertake.
+                Our core values define who we are and guide us in every project
+                we undertake.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {companyValues.map((value, index) => (
@@ -213,7 +265,9 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Achievements</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Our Achievements
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
@@ -231,22 +285,37 @@ export default function AboutPage() {
         <section className="mb-16">
           <Card>
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-center mb-4">Our Expertise</h2>
+              <h2 className="text-3xl font-bold text-center mb-4">
+                Our Expertise
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 <div className="flex flex-col items-center text-center">
                   <Briefcase className="w-12 h-12 text-orange-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Project Management</h3>
-                  <p className="text-muted-foreground">Efficient and effective management of complex construction projects.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Project Management
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Efficient and effective management of complex construction
+                    projects.
+                  </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Users className="w-12 h-12 text-orange-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
-                  <p className="text-muted-foreground">Fostering a collaborative environment for optimal results.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Team Collaboration
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Fostering a collaborative environment for optimal results.
+                  </p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Zap className="w-12 h-12 text-orange-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Innovative Solutions</h3>
-                  <p className="text-muted-foreground">Implementing cutting-edge technologies and methodologies.</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Innovative Solutions
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Implementing cutting-edge technologies and methodologies.
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -254,9 +323,12 @@ export default function AboutPage() {
         </section>
 
         <section className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Start Your Project?
+          </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Lets bring your vision to life. Our team of experts is ready to help you create exceptional spaces that inspire and endure.
+            Lets bring your vision to life. Our team of experts is ready to help
+            you create exceptional spaces that inspire and endure.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">Contact Us Today</Link>
@@ -265,5 +337,5 @@ export default function AboutPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

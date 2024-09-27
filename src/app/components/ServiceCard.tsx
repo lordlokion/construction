@@ -3,9 +3,18 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Building2, PaintBucket, Hammer, Ruler, Truck, HardHat } from 'lucide-react'
+import { Building2, PaintBucket, Hammer, Ruler, Truck, HardHat, LucideIcon } from 'lucide-react'
 
-const iconComponents = {
+// Define the type for the service prop
+interface Service {
+  id: string;
+  iconName: keyof typeof iconComponents;
+  title: string;
+  description: string;
+}
+
+// Define the type for the iconComponents object
+const iconComponents: { [key: string]: LucideIcon } = {
   Building2,
   PaintBucket,
   Hammer,
@@ -14,7 +23,7 @@ const iconComponents = {
   HardHat
 }
 
-const ServiceCard = ({ service }) => {
+const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
   const IconComponent = iconComponents[service.iconName]
 
   return (
