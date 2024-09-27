@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Calendar, User } from 'lucide-react'
-import Header from '@/app/components/Header'
-import Footer from '@/app/components/Footer'
-import Image from 'next/image'
+import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, User } from "lucide-react";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -13,31 +13,82 @@ interface Project {
   date: string;
   client: string;
   image: string;
+  length?: string; // Optional length field
+  cost?: string; // Optional cost field
 }
 
-const projects: Project[] = [
+const ongoingProjects: Project[] = [
   {
-    title: 'Urban Loft Renovation',
-    description: 'A contemporary renovation project that transformed a dated loft into a modern urban retreat.',
-    date: 'March 2024',
-    client: 'Sarah Lee',
-    image: '/3.jpg'
+    title: "Strengthening of Ramuna to Manjhion Road",
+    description: "Improving the road infrastructure for better transportation.",
+    date: "Ongoing",
+    client: "Road Construction Department (RCD)",
+    length: "29.3 KM",
+    cost: "₹ 571,475,305.44",
+    image: "/img6.jpeg",
   },
   {
-    title: 'Greenfield Housing Development',
-    description: 'A large-scale housing project featuring eco-friendly designs and sustainable materials.',
-    date: 'July 2023',
-    client: 'Greenfield Ltd.',
-    image: '/22.jpg'
+    title: "322 Dwelling Units under PM Awas Yojana",
+    description: "Construction of housing units to promote urban living.",
+    date: "Ongoing",
+    client: "National Projects Construction Corporation Limited (NPCC)",
+    image: "/1.jpg",
+  },
+
+  {
+    title: "Reconstruction of Fatehpur to Bongi Road",
+    description: "Revamping the road for enhanced accessibility.",
+    date: "Ongoing",
+    client: "Road Construction Department (RCD)",
+    length: "15.81 KM",
+    image: "/222.jpg",
   },
   {
-    title: 'Downtown Office Building',
-    description: 'A sleek and functional office building designed to meet the needs of modern businesses.',
-    date: 'November 2022',
-    client: 'TechCorp Inc.',
-    image: '/1.jpg'
-  }
-]
+    title: "Widening & Strengthening of Mirzachowki to Boarijor Road",
+    description:
+      "Ongoing road construction project improving connectivity in Jharkhand.",
+    date: "Ongoing",
+    client: "Road Construction Department (RCD)",
+    length: "16.97 KM",
+    cost: "₹ 760,489,059.27",
+    image: "/img1.jpeg",
+  },
+  {
+    title: "Multipurpose Examination Hall in GLA College Daltonganj",
+    description: "Construction of a hall to facilitate academic activities.",
+    date: "Ongoing",
+    client:
+      "Jharkhand State Building Construction Corporation Limited (JSBCCL)",
+    image: "/1.jpg",
+  },
+  {
+    title: "Community Health Centre Garhwa",
+    description: "Improving healthcare access through facility development.",
+    date: "Ongoing",
+    client:
+      "Jharkhand State Building Construction Corporation Limited (JSBCCL)",
+    image: "/22.jpg",
+  },
+];
+
+const completedProjects: Project[] = [
+  {
+    title: "Widening & Strengthening of NH-100 to Nawadih Road",
+    description: "Successfully completed road project enhancing connectivity.",
+    date: "Completed",
+    client: "Road Construction Department (RCD)",
+    length: "17.60 KM",
+    image: "/1.jpg",
+  },
+  {
+    title: "Reconstruction Work of Tiliya -Jainagar - Bagro Road ",
+    description: "Completed project improving road access and safety.",
+    date: "Completed",
+    client: "Road Construction Department (RCD)",
+    length: "18.55 KM",
+    image: "/22.jpg",
+  },
+];
 
 interface ProjectCardProps {
   project: Project;
@@ -51,7 +102,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => (
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className="bg-white rounded-lg shadow-md overflow-hidden"
   >
-    <Image src={project.image} alt={project.title} width={500} height={500} className="w-full h-40 object-cover" />
+    <Image
+      src={project.image}
+      alt={project.title}
+      width={500}
+      height={500}
+      className="w-full h-40 object-cover"
+    />
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
       <p className="text-gray-600 mb-4">{project.description}</p>
@@ -63,32 +120,63 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => (
           <User className="w-4 h-4" /> {project.client}
         </span>
       </div>
+      {project.length && (
+        <p className="text-gray-600">Length: {project.length}</p>
+      )}
+      {project.cost && <p className="text-gray-600">Cost: {project.cost}</p>}
     </div>
   </motion.div>
-)
+);
 
 export default function ProjectsPage() {
   return (
     <div className="bg-gray-100">
       <Header />
-      <header className="bg-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-2">Our Projects</h1>
+      <header className="relative text-white py-20">
+        <div
+          className="absolute inset-0 bg-black opacity-30" // Black overlay with 70% opacity
+          style={{
+            backgroundImage: "url(/222.jpg)", // Your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: 1, // Keep it below the text
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-100" />{" "}
+        {/* Black overlay */}
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
+            Our Projects
+          </h1>
           <p className="text-center">
-            <span className="text-gray-400">Home</span>{' '}
+            <span className="text-gray-400">Home</span>{" "}
             <span className="text-orange-500">/ Projects</span>
           </p>
         </div>
       </header>
 
       <main className="container mx-auto py-16 px-4">
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
-          ))}
+        {/* Ongoing Projects Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4">Ongoing Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ongoingProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
+          </div>
+        </section>
+
+        {/* Completed Projects Section */}
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Completed Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {completedProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
+          </div>
         </section>
       </main>
       <Footer />
     </div>
-  )
+  );
 }

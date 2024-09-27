@@ -3,11 +3,16 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { Calendar, User } from "lucide-react";
 
 interface ProjectData {
   image: string;
   title: string;
   date: string;
+  description?: string; // Optional description field
+  client?: string; // Optional client field
+  length?: string; // Optional length field
+  cost?: string; // Optional cost field
 }
 
 interface ProjectCardProps extends ProjectData {
@@ -18,6 +23,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   title,
   date,
+  description,
+  client,
+  length,
+  cost,
   index,
 }) => {
   const ref = useRef(null);
@@ -30,17 +39,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.05 }}
     >
       <motion.img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover"
+        className="w-full h-40 object-cover"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
       />
-      <div className="p-4">
+      <div className="p-6">
         <motion.h3
           className="text-xl font-semibold mb-2"
           initial={{ opacity: 0 }}
@@ -49,15 +57,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           {title}
         </motion.h3>
-        <motion.p
-          className="text-gray-600"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-        >
-          {date}
-          
-        </motion.p>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <div className="flex items-center gap-4 text-gray-500 text-sm">
+          {client && (
+            <span className="flex items-center gap-1">
+              <User className="w-4 h-4" /> {client}
+            </span>
+          )}
+          <span className="flex items-center gap-1">
+            <Calendar className="w-4 h-4" /> {date}
+          </span>
+        </div>
+        {length && <p className="text-gray-600">Length: {length}</p>}
+        {cost && <p className="text-gray-600">Cost: {cost}</p>}
       </div>
     </motion.div>
   );
@@ -68,21 +80,38 @@ const AnimatedProjects: React.FC = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const projects: ProjectData[] = [
+    
     {
+      title: "Widening of Mirzachowki to Boarijor Road",
+      description:
+        "Ongoing road construction project improving connectivity in Jharkhand.",
+      date: "Ongoing",
+      client: "Road Construction Department (RCD)",
+      length: "16.97 KM",
+      cost: "₹ 760,489,059.27",
+      image: "/img1.jpeg",
+    },
+    
+    {
+      title: "Strengthening of Ramuna to Manjhion Road",
+      description: "Improving the road infrastructure for better transportation.",
+      date: "Ongoing",
+      client: "Road Construction Department (RCD)",
+      length: "29.3 KM",
+      cost: "₹ 571,475,305.44",
+      image: "/img6.jpeg",
+    },
+    {
+      title: "Multipurpose Examination Hall in GLA College Daltonganj",
+      description: "Construction of a hall to facilitate academic activities.",
+      date: "Ongoing",
+      client:
+        "JSBCCL",
       image: "/1.jpg",
-      title: "Historic Restoration",
-      date: "May 15, 2024",
+      length: "N/A",
+      cost: "N/A",
     },
-    {
-      image: "/22.jpg",
-      title: "Cultural Landmark",
-      date: "May 13, 2024",
-    },
-    {
-      image: "/222.jpg",
-      title: "Industrial Innovation",
-      date: "May 13, 2024",
-    },
+    
   ];
 
   return (

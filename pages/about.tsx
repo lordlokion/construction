@@ -160,25 +160,26 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <header className="bg-gray-800 text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-2">About Us</h1>
-          <nav className="text-center" aria-label="Breadcrumb">
-            <ol className="inline-flex">
-              <li>
-                <Link
-                  href="/"
-                  className="text-primary-foreground/80 hover:text-primary-foreground"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="mx-2">/</li>
-              <li className="text-orange-500" aria-current="page">
-                About Us
-              </li>
-            </ol>
-          </nav>
+      <header className="relative text-white py-20">
+        <div
+          className="absolute inset-0 bg-black opacity-30" // Black overlay with 70% opacity
+          style={{
+            backgroundImage: "url(/222.jpg)", // Your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: 1, // Keep it below the text
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-100" />{" "}
+        {/* Black overlay */}
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
+           About Us
+          </h1>
+          <p className="text-center">
+            <span className="text-gray-400">Home</span>{" "}
+            <span className="text-orange-500">/ About Us</span>
+          </p>
         </div>
       </header>
 

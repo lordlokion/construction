@@ -18,11 +18,24 @@ const galleryImages = [
 
 const GalleryPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-2">
+    <div className="min-h-screen bg-gray-100">
       <Header />
-      <header className="bg-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-2">Gallery</h1>
+      <header className="relative text-white py-20">
+        <div
+          className="absolute inset-0 bg-black opacity-30" // Black overlay with 70% opacity
+          style={{
+            backgroundImage: "url(/222.jpg)", // Your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: 1, // Keep it below the text
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-100" />{" "}
+        {/* Black overlay */}
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
+            Our Gallery
+          </h1>
           <p className="text-center">
             <span className="text-gray-400">Home</span>{" "}
             <span className="text-orange-500">/ Gallery</span>
