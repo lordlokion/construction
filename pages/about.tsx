@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Image from "next/image";
 
 interface TeamMember {
   name: string;
@@ -162,19 +163,18 @@ export default function AboutPage() {
       <Header />
       <header className="relative text-white py-20">
         <div
-          className="absolute inset-0 bg-black opacity-30" // Black overlay with 70% opacity
+          className="absolute inset-0 bg-black opacity-30"
           style={{
-            backgroundImage: "url(/222.jpg)", // Your image path
+            backgroundImage: "url(/222.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            zIndex: 1, // Keep it below the text
+            zIndex: 1,
           }}
         />
-        <div className="absolute inset-0 bg-black opacity-100" />{" "}
-        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black opacity-100" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
-           About Us
+            Our Company
           </h1>
           <p className="text-center">
             <span className="text-gray-400">Home</span>{" "}
@@ -221,6 +221,95 @@ export default function AboutPage() {
               color="bg-gradient-to-br from-green-500 to-green-600 text-white"
             />
           </motion.div>
+        </section>
+
+        <section className="mb-16 max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-4">
+                ONS: Pioneering India’s Sustainable Infrastructure Revolution
+              </h2>
+              <p className="text-gray-600 mb-4">
+                Infrastructure is the backbone of the ‘New India’ vision,
+                encompassing vital projects such as roads, dams, power
+                facilities, and accessible housing. At ONS, we are at the
+                forefront of this transformative journey, playing a crucial role
+                in laying the groundwork for future success. As a rapidly
+                growing Engineering, Procurement, and Construction (EPC) firm,
+                we align our efforts with the nation’s ambitious development
+                goals.
+              </p>
+              <Link href="/services" className="text-blue-600 font-semibold">
+                Read More About Us
+              </Link>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/222.jpg"
+                alt="Futuristic city illustration"
+                width={500}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16 max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <Image
+                src="/222.jpg"
+                alt="Futuristic city illustration"
+                width={500}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-4">
+                Inspirational Leadership
+              </h2>
+              <p className="text-gray-600 mb-4">
+                The inspiring leadership at ONS has propelled the company to
+                prominence as one of India’s leading independently owned EPC
+                firms. Our success is driven by our exceptional execution
+                capabilities, a proprietary fleet of advanced machinery and
+                vehicles, and a dedicated workforce of over 26,000 employees.
+                Leveraging cutting-edge technologies such as Drone Monitoring,
+                GPS Tracking, and Safety Management Systems, ONS is committed to
+                delivering projects that meet the highest standards of quality
+                and efficiency.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16 max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
+              <p className="text-gray-600 mb-4">
+                From humble beginnings to becoming a leader in infrastructure
+                development, the DBL journey is a testament to our commitment,
+                innovation, and relentless pursuit of excellence. Discover how
+                we've grown and evolved over the years, shaping India's
+                infrastructure landscape.
+              </p>
+              <Link href="/projects" className="text-blue-600 font-semibold">
+                View Our Projects
+              </Link>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/222.jpg"
+                alt="City and construction illustration"
+                width={500}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
         </section>
 
         <section className="mb-16">
@@ -328,8 +417,8 @@ export default function AboutPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Lets bring your vision to life. Our team of experts is ready to help
-            you create exceptional spaces that inspire and endure.
+            Let's bring your vision to life. Our team of experts is ready to
+            help you create exceptional spaces that inspire and endure.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">Contact Us Today</Link>

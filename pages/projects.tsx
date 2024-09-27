@@ -41,7 +41,7 @@ const ongoingProjects: Project[] = [
     date: "Ongoing",
     client: "Road Construction Department (RCD)",
     length: "15.81 KM",
-    image: "/222.jpg",
+    image: "/img3.jpeg",
   },
   {
     title: "Widening & Strengthening of Mirzachowki to Boarijor Road",
@@ -78,7 +78,7 @@ const completedProjects: Project[] = [
     date: "Completed",
     client: "Road Construction Department (RCD)",
     length: "17.60 KM",
-    image: "/1.jpg",
+    image: "/img4.jpeg",
   },
   {
     title: "Reconstruction Work of Tiliya -Jainagar - Bagro Road ",
@@ -86,7 +86,7 @@ const completedProjects: Project[] = [
     date: "Completed",
     client: "Road Construction Department (RCD)",
     length: "18.55 KM",
-    image: "/22.jpg",
+    image: "/img5.jpeg",
   },
 ];
 
@@ -116,12 +116,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => (
         <span className="flex items-center gap-1">
           <Calendar className="w-4 h-4" /> {project.date}
         </span>
-        <span className="flex items-center gap-1">
+        <span className="flex items-center mx-4  gap-1">
           <User className="w-4 h-4" /> {project.client}
         </span>
       </div>
       {project.length && (
-        <p className="text-gray-600">Length: {project.length}</p>
+        <p className="text-gray-600 mt-2">Length: {project.length}</p>
       )}
       {project.cost && <p className="text-gray-600">Cost: {project.cost}</p>}
     </div>
@@ -157,7 +157,7 @@ export default function ProjectsPage() {
 
       <main className="container mx-auto py-16 px-4">
         {/* Ongoing Projects Section */}
-        <section className="mb-16">
+        <section className="mb-16 max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold mb-4">Ongoing Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ongoingProjects.map((project, index) => (
@@ -167,8 +167,8 @@ export default function ProjectsPage() {
         </section>
 
         {/* Completed Projects Section */}
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Completed Projects</h2>
+        <section className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 ">Completed Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {completedProjects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />

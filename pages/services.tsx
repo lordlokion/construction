@@ -78,7 +78,7 @@ const whyChooseUs: Feature[] = [
 const ServiceCard: React.FC<{ service: Service }> = ({ service }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
-    className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+    className="bg-white rounded-lg  shadow-md overflow-hidden border border-gray-200"
   >
     <div className="p-6">
       <div className="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
@@ -133,16 +133,16 @@ export default function ServicesPage() {
         </div>
       </header>
 
-      <main className="container mx-auto py-16 px-4">
+      <main className="container mx-auto py-16 px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
         </div>
 
-        <section className="bg-gray-800 text-white py-16 px-4 rounded-lg">
+        <section className="bg-gray-800 text-white py-8 px-4 rounded-lg">
           <h2 className="text-3xl font-bold text-center mb-2">Why Choose Om Namo Siwai</h2>
-          <div className="w-16 h-1 bg-orange-500 mx-auto mb-8"></div>
+          <div className="w-48 h-1 bg-orange-500 mx-auto mb-8"></div>
           <p className="text-center text-gray-400 mb-12">
             When you choose Om Namo Siwai, youre choosing a partner you can trust
           </p>

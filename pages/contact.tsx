@@ -9,17 +9,30 @@ export default function ContactPage() {
   return (
     <div className="bg-gray-100">
       <Header />
-      <header className="bg-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-2">Contact Us</h1>
+      <header className="relative text-white py-20">
+        <div
+          className="absolute inset-0 bg-black opacity-30" // Black overlay with 70% opacity
+          style={{
+            backgroundImage: "url(/222.jpg)", // Your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: 1, // Keep it below the text
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-100" />{" "}
+        {/* Black overlay */}
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
+            Contact Us
+          </h1>
           <p className="text-center">
-            <span className="text-gray-400">Home</span>{' '}
+            <span className="text-gray-400">Home</span>{" "}
             <span className="text-orange-500">/ Contact Us</span>
           </p>
         </div>
       </header>
 
-      <main className="container mx-auto py-16 px-4">
+      <main className="container mx-auto py-16 px-4 max-w-7xl">
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
           <div>
             <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>

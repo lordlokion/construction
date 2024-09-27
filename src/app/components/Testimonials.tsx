@@ -49,17 +49,17 @@ const ClientTestimonials: React.FC = () => {
     {
       name: "John Doe",
       text: "Amazing service! Highly recommend for anyone looking for reliable and professional work.",
-      photo: "/1.jpeg" // Placeholder image URL
+      photo: "/1.jpg" // Placeholder image URL
     },
     {
       name: "Jane Smith",
       text: "The team exceeded my expectations. The attention to detail and customer care was exceptional.",
-      photo: "/1.jpeg" // Placeholder image URL
+      photo: "/1.jpg" // Placeholder image URL
     },
     {
       name: "Alice Johnson",
       text: "Fantastic experience from start to finish. The quality of work was top-notch and the process was seamless.",
-      photo: "/1.jpeg" // Placeholder image URL
+      photo: "/1.jpg" // Placeholder image URL
     }
   ];
 

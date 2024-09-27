@@ -51,7 +51,7 @@ export default function MarqueeLogoWall() {
 
   return (
     <div
-      className={`mb-12 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 ${
+      className={`mb-12 flex flex-col  items-center justify-center bg-gray-100 dark:bg-gray-800 ${
         isVertical ? "h-screen" : ""
       }`}
     >

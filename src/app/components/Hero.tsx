@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
 
       {/* Company Details */}
-      <div className="absolute top-4 left-4 z-20 text-white bg-gray-800 bg-opacity-70 p-4 rounded-md hidden lg:block">
+      <div className="absolute  top-4 left-4 z-20 text-white bg-gray-800 bg-opacity-70 p-4 rounded-md hidden lg:block">
   <h2 className="text-lg font-bold">Company Address:</h2>
   <p className="text-sm">Opposite SBI ATM, Ranchi Khunti Road<br />Hatia Bazar, Ranchi, 834003</p>
   <p className="text-sm">Contact: (000) 000-0000</p>

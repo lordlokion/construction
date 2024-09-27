@@ -18,7 +18,7 @@ const galleryImages = [
 
 const GalleryPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 ">
       <Header />
       <header className="relative text-white py-20">
         <div
@@ -43,7 +43,7 @@ const GalleryPage = () => {
         </div>
       </header>
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto mt-16s p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -66,15 +66,7 @@ const GalleryPage = () => {
           </Link>
         ))}
       </motion.div>
-      <Link href="/">
-    <motion.button
-            className="bg-orange-500 mt-12 mb-12 mx-auto item-center justify-between text-white px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      Back to Home
-    </motion.button>
-  </Link>
+     
       <Footer />
     </div>
   );
