@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Calendar className="w-4 h-4" /> {date}
           </span>
         </div>
-        {length && <p className="text-gray-600">Length: {length}</p>}
+        {length && <p className="text-gray-600 mt-4">Length: {length}</p>}
         {cost && <p className="text-gray-600">Cost: {cost}</p>}
       </div>
     </motion.div>
@@ -86,7 +86,7 @@ const AnimatedProjects: React.FC = () => {
       description:
         "Ongoing road construction project improving connectivity in Jharkhand.",
       date: "Ongoing",
-      client: "Road Construction Department (RCD)",
+      client: "Road Construction Department",
       length: "16.97 KM",
       cost: "₹ 760,489,059.27",
       image: "/img1.jpeg",
@@ -96,7 +96,7 @@ const AnimatedProjects: React.FC = () => {
       title: "Strengthening of Ramuna to Manjhion Road",
       description: "Improving the road infrastructure for better transportation.",
       date: "Ongoing",
-      client: "Road Construction Department (RCD)",
+      client: "Road Construction Department",
       length: "29.3 KM",
       cost: "₹ 571,475,305.44",
       image: "/img6.jpeg",
