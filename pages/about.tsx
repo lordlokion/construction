@@ -227,16 +227,16 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-4">
-                ONS: Pioneering India’s Sustainable Infrastructure Revolution
+                ONS: Pioneering Indias Sustainable Infrastructure Revolution
               </h2>
               <p className="text-gray-600 mb-4">
-                Infrastructure is the backbone of the ‘New India’ vision,
+                Infrastructure is the backbone of the New India vision,
                 encompassing vital projects such as roads, dams, power
                 facilities, and accessible housing. At ONS, we are at the
                 forefront of this transformative journey, playing a crucial role
                 in laying the groundwork for future success. As a rapidly
                 growing Engineering, Procurement, and Construction (EPC) firm,
-                we align our efforts with the nation’s ambitious development
+                we align our efforts with the nations ambitious development
                 goals.
               </p>
               <Link href="/services" className="text-blue-600 font-semibold">
@@ -272,7 +272,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-600 mb-4">
                 The inspiring leadership at ONS has propelled the company to
-                prominence as one of India’s leading independently owned EPC
+                prominence as one of Indias leading independently owned EPC
                 firms. Our success is driven by our exceptional execution
                 capabilities, a proprietary fleet of advanced machinery and
                 vehicles, and a dedicated workforce of over 26,000 employees.
