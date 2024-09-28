@@ -6,8 +6,11 @@ import Link from "next/link";
 
 const images = [
   "/22.jpg",
+  "/img1.jpeg",
   "/222.jpg",
-  "/1.jpg", // Add more image paths as needed
+  "/img2.jpeg",
+  "/1.jpg",
+  "/img5.jpeg",
 ];
 
 const Hero: React.FC = () => {
@@ -44,11 +47,14 @@ const Hero: React.FC = () => {
 
       {/* Company Details */}
       <div className="absolute  top-4 left-4 z-20 text-white bg-gray-800 bg-opacity-70 p-4 rounded-md hidden lg:block">
-  <h2 className="text-lg font-bold">Company Address:</h2>
-  <p className="text-sm">Opposite SBI ATM, Ranchi Khunti Road<br />Hatia Bazar, Ranchi, 834003</p>
-  <p className="text-sm">Contact: (000) 000-0000</p>
-</div>
-
+        <h2 className="text-lg font-bold">Company Address:</h2>
+        <p className="text-sm">
+          Opposite SBI ATM, Ranchi Khunti Road
+          <br />
+          Hatia Bazar, Ranchi, 834003
+        </p>
+        <p className="text-sm">Contact: (000) 000-0000</p>
+      </div>
 
       <div className="container mx-auto px-4 relative z-20 flex justify-center items-center h-full">
         <div className="text-center">
@@ -66,9 +72,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            Discover top-tier construction services with OM NAMO SIWAI.<br /> From
-            concept to completion, we turn your vision into reality with
-            expertise and dedication.
+            Discover top-tier construction services with OM NAMO SIWAI.
+            <br /> From concept to completion, we turn your vision into reality
+            with expertise and dedication.
           </motion.p>
 
           <motion.div

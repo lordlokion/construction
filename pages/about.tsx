@@ -174,7 +174,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black opacity-100" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
-            Our Company
+            About Us{" "}
           </h1>
           <p className="text-center">
             <span className="text-gray-400">Home</span>{" "}
@@ -417,8 +417,8 @@ export default function AboutPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Lets bring your vision to life. Our team of experts is ready to
-            help you create exceptional spaces that inspire and endure.
+            Lets bring your vision to life. Our team of experts is ready to help
+            you create exceptional spaces that inspire and endure.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">Contact Us Today</Link>

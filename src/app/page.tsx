@@ -1,12 +1,12 @@
-import Header from '../app/components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-import Testimonials from './components/Testimonials';
-import MarqueLogo from './components/MarqueLogo';
-
+import Header from "../app/components/Header";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
+import MarqueLogo from "./components/MarqueLogo";
+import Abouth from "./components/Abouth";
 
 export default function Home() {
   return (
@@ -19,6 +19,7 @@ export default function Home() {
         <About />
         <Projects />
         <Testimonials />
+        <Abouth />
         <Footer />
       </main>
     </div>
