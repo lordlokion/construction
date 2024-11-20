@@ -223,78 +223,99 @@ export default function AboutPage() {
           </motion.div>
         </section>
 
-        <section className="mb-16 max-w-6xl mx-auto">
+        <section className="mb-16 max-w-6xl mx-auto bg-blue-50 p-6 rounded-md shadow-sm">
           <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">
-                ONS: Pioneering Indias Sustainable Infrastructure Revolution
+            <div className="md:w-1/2 border-l-4 border-blue-500 pl-4">
+              <h2 className="text-3xl font-bold mb-4 text-blue-600">
+                The Leaders Behind Our Legacy
               </h2>
               <p className="text-gray-600 mb-4">
-                Infrastructure is the backbone of the New India vision,
-                encompassing vital projects such as roads, dams, power
-                facilities, and accessible housing. At ONS, we are at the
-                forefront of this transformative journey, playing a crucial role
-                in laying the groundwork for future success. As a rapidly
-                growing Engineering, Procurement, and Construction (EPC) firm,
-                we align our efforts with the nations ambitious development
-                goals.
+                At the heart of Om Namo Siwai Construction Company lies a
+                leadership team that embodies wisdom, resilience, and
+                forward-thinking strategies. Inspired by the values of
+                dedication and excellence, our leadership team brings
+                unparalleled vision to the world of construction. Guided by a
+                commitment to strong foundational ethics and sustainable growth,
+                our leaders have carved a path that blends traditional
+                craftsmanship with modern engineering prowess. Their philosophy
+                is simple: create infrastructure that stands the test of time
+                and contributes positively to the communities we serve.
               </p>
-              <Link href="/services" className="text-blue-600 font-semibold">
-                Read More About Us
-              </Link>
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/222.jpg"
+                src="/MD1.png"
                 alt="Futuristic city illustration"
                 width={500}
                 height={300}
                 className="rounded-lg"
               />
+             <div className="mt-4 p-6 bg-white rounded-md shadow-md border-l-4 border-blue-500">
+  <h3 className="text-xl font-semibold text-blue-600 mb-2">
+    John Doe
+  </h3>
+  <p className="text-gray-700 font-medium">Chairman & CEO</p>
+</div>
+
             </div>
           </div>
         </section>
 
-        <section className="mb-16 max-w-6xl mx-auto">
+        <section className="mb-16 max-w-6xl mx-auto bg-blue-50 p-6 rounded-md shadow-sm">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
               <Image
-                src="/222.jpg"
+                src="/GM1.png"
                 alt="Futuristic city illustration"
                 width={500}
                 height={300}
-                className="rounded-lg"
+                className="rounded-lg shadow-lg"
               />
+              <div className="mt-4 p-4 bg-white border-l-4 border-blue-500 rounded-md shadow-md">
+                <h3 className="text-xl font-semibold text-blue-600">
+                  John Doe
+                </h3>
+                <p className="text-gray-700">Manager</p>
+              </div>
             </div>
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">
+            <div className="md:w-1/2 pr-2 border-r-4 border-blue-500 pl-4">
+              <h2 className="text-3xl font-bold mb-4 text-blue-600">
                 Inspirational Leadership
               </h2>
-              <p className="text-gray-600 mb-4">
-                The inspiring leadership at ONS has propelled the company to
-                prominence as one of Indias leading independently owned EPC
-                firms. Our success is driven by our exceptional execution
-                capabilities, a proprietary fleet of advanced machinery and
-                vehicles, and a dedicated workforce of over 26,000 employees.
-                Leveraging cutting-edge technologies such as Drone Monitoring,
-                GPS Tracking, and Safety Management Systems, ONS is committed to
-                delivering projects that meet the highest standards of quality
-                and efficiency.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our leadership team is driven by a profound purpose—to build
+                structures that are not only functional and aesthetic but also
+                resonate with the spirit of progress and development. With
+                decades of experience, their ability to inspire, lead, and
+                innovate has fueled the company’s growth, positioning Om Namo
+                Siwai Construction Company as a respected name in the industry.
+                We believe that true leadership is not just about guiding the
+                team but empowering each member to excel. Every brick laid and
+                every beam placed reflects our dedication to creating a legacy
+                of integrity and excellence. Together, we build not just
+                structures, but dreams.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="mb-16 max-w-6xl mx-auto">
+        <section className="mb-16 md:pb-24 max-w-6xl mx-auto bg-blue-50 p-6 rounded-md shadow-sm">
           <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
-              <p className="text-gray-600 mb-4">
-                From humble beginnings to becoming a leader in infrastructure
-                development, the DBL journey is a testament to our commitment,
-                innovation, and relentless pursuit of excellence. Discover how
-                weve grown and evolved over the years, shaping Indias
-                infrastructure landscape.
+            <div className="md:w-1/2 border-l-4 border-blue-500 pl-4">
+              <h2 className="text-3xl font-bold mb-4 text-blue-600">
+                Our Journey
+              </h2>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Om Namo Siwai Construction Company began with a vision to
+                transform the construction landscape with unmatched quality and
+                integrity. From our humble beginnings with a dedicated team of
+                experts, we have grown into a trusted name in the industry. Over
+                the years, we have embraced innovation and sustainable
+                practices, completing residential and commercial projects that
+                reflect our commitment to excellence. Each milestone has been a
+                testament to our resilience, collaborative spirit, and pursuit
+                of progress. Today, we stand as builders of not just structures,
+                but legacies that inspire and endure.
               </p>
               <Link href="/projects" className="text-blue-600 font-semibold">
                 View Our Projects
@@ -302,11 +323,11 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/222.jpg"
+                src="/img1.jpeg"
                 alt="City and construction illustration"
                 width={500}
                 height={300}
-                className="rounded-lg"
+                className="rounded-lg shadow-lg"
               />
             </div>
           </div>

@@ -32,7 +32,7 @@ const ongoingProjects: Project[] = [
     description: "Construction of housing units to promote urban living.",
     date: "Ongoing",
     client: "National Projects Construction Corporation Limited (NPCC)",
-    image: "/1.jpg",
+    image: "/img13.jpeg",
   },
 
   {

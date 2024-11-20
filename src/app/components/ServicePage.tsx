@@ -81,7 +81,7 @@ const ServicePage: React.FC<{ service: Service }> = ({ service }) => {
           <ArrowLeft className="mr-2" /> Back to Services
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto max-w-7xl">
           <Card className="col-span-2 bg-white-800 border-gray-700">
             <CardHeader>
               <div className="flex items-center space-x-4">
