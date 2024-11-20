@@ -108,8 +108,7 @@ const AnimatedProjects: React.FC = () => {
       client:
         "JSBCCL",
       image: "/1.jpg",
-      length: "N/A",
-      cost: "N/A",
+      cost: "₹ 9,24,27,983.10",
     },
     
   ];

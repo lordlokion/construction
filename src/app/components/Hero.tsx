@@ -4,10 +4,11 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
+ 
+  "/home1.jpg",
+  "/home2.jpg",
   "/22.jpg",
   "/222.jpg",
-  "/1.jpg",
-  "/img5.jpeg",
 ];
 
 const Hero: React.FC = () => {
@@ -22,7 +23,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-24 md:py-48 mb-12 overflow-hidden">
+    <section className="relative py-24 md:py-80 mb-12 overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         {images.map((src, index) => (

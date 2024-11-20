@@ -28,7 +28,9 @@ const Header: React.FC = () => {
         </Link>
         <nav className="hidden md:flex space-x-6">
         
-         
+        <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+            Home
+          </Link>
          
           <Link href="/services" className="text-white hover:text-gray-300 transition-colors">
             Services
@@ -42,8 +44,8 @@ const Header: React.FC = () => {
           <Link href="/gallery" className="text-white hover:text-gray-300 transition-colors">
             Gallery
           </Link>
-          <Link href="/carrer" className="text-white hover:text-gray-300 transition-colors">
-            Carrers
+          <Link href="/career" className="text-white hover:text-gray-300 transition-colors">
+          Careers
           </Link>
         </nav>
         <Link href="/contact" className="hidden md:block bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">
@@ -60,7 +62,9 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white py-2">
           
-         
+          <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
+            Home
+          </Link>
           <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
             Services
           </Link>
@@ -77,8 +81,8 @@ const Header: React.FC = () => {
           <Link href="/contact" className="block px-4 py-2 text-orange-500 hover:bg-gray-100 transition-colors">
             Contact Us
           </Link>
-          <Link href="/carrer" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
-            Carrers
+          <Link href="/career" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
+            Careers
           </Link>
         </div>
       )}
