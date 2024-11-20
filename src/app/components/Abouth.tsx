@@ -13,9 +13,9 @@ interface Achievement {
 }
 
 const achievements: Achievement[] = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "50+", label: "Awards Won" },
-  { number: "20+", label: "Years of Experience" },
+  { number: "100+", label: "Projects Completed" },
+  { number: "20+", label: "Awards Won" },
+  { number: "2013", label: "Year of Establishment" },
   { number: "100%", label: "Client Satisfaction" },
 ];
 

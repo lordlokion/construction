@@ -99,16 +99,22 @@ export default function ContactPage() {
                 <Mail className="w-6 h-6 text-orange-500" />
                 <div>
                   <h3 className="text-xl font-semibold">Email</h3>
-                  <a href="mailto:hello@omnamosiwai.com">
-                    <p className="text-gray-600">hello@omnamosiwai.com</p>
+                  <a href="mailto:contact@omnamosiwai.com">
+                    <p className="text-gray-600">contact@omnamosiwai.com</p>
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-4 mb-4">
                 <Phone className="w-6 h-6 text-orange-500" />
+                
                 <div>
                   <h3 className="text-xl font-semibold">Phone</h3>
-                  <p className="text-gray-600">(000) 000-0000</p>
+                  <a 
+          href="tel:+919835550890" 
+          className="text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+                  <p className="text-gray-600">(+91) 98355-50890</p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -128,14 +134,18 @@ export default function ContactPage() {
                 Find Us on the Map
               </h2>
               <div className="w-full h-64">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.174099874048!2d-122.42180868468018!3d37.774929779759555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d1b2e3e4d%3A0x459d7d40e5f5600!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094175!5e0!3m2!1sen!2sus!4v1630636934973!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                ></iframe>
+              <iframe
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3664.8350519672376!2d85.3062345!3d23.2854425!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDE3JzA3LjYiTiA4NcKwMTgnMzEuNyJF!5e0!3m2!1sen!2sin!4v1732102430252!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Maps Location"
+          className="w-full h-full"
+          aria-label="Interactive map showing our location in Ranchi, India"
+        />
               </div>
             </div>
           </div>

@@ -94,9 +94,9 @@ const companyValues: CompanyValue[] = [
 ];
 
 const achievements: Achievement[] = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "50+", label: "Awards Won" },
-  { number: "20+", label: "Years of Experience" },
+  { number: "100+", label: "Projects Completed" },
+  { number: "20+", label: "Awards Won" },
+  { number: "2013", label: "Years of Establishment" },
   { number: "100%", label: "Client Satisfaction" },
 ];
 
@@ -252,7 +252,7 @@ export default function AboutPage() {
               />
              <div className="mt-4 p-6 bg-white rounded-md shadow-md border-l-4 border-blue-500">
   <h3 className="text-xl font-semibold text-blue-600 mb-2">
-    John Doe
+  Mr. Seth Kumar
   </h3>
   <p className="text-gray-700 font-medium">Chairman (MD)</p>
 </div>
@@ -273,7 +273,7 @@ export default function AboutPage() {
               />
               <div className="mt-4 p-4 bg-white border-l-4 border-blue-500 rounded-md shadow-md">
                 <h3 className="text-xl font-semibold text-blue-600">
-Gopal Singh                </h3>
+Mr. Gopal Singh                </h3>
                 <p className="text-gray-700">General Manager (GM)</p>
               </div>
             </div>
@@ -316,13 +316,11 @@ Gopal Singh                </h3>
                 of progress. Today, we stand as builders of not just structures,
                 but legacies that inspire and endure.
               </p>
-              <Link href="/projects" className="text-blue-600 font-semibold">
-                View Our Projects
-              </Link>
+             
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/img1.jpeg"
+                src="/img5.jpeg"
                 alt="City and construction illustration"
                 width={500}
                 height={300}

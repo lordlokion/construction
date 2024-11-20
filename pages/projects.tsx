@@ -31,6 +31,7 @@ const ongoingProjects: Project[] = [
     title: "322 Dwelling Units under PM Awas Yojana",
     description: "Construction of housing units to promote urban living.",
     date: "Ongoing",
+    cost: '₹ 21,52,33,494' , 
     client: "National Projects Construction Corporation Limited (NPCC)",
     image: "/img13.jpeg",
   },
@@ -42,6 +43,8 @@ const ongoingProjects: Project[] = [
     client: "Road Construction Department (RCD)",
     length: "15.81 KM",
     image: "/img3.jpeg",
+    cost: '₹ 35,83,41,168.16' , 
+
   },
   {
     title: "Widening & Strengthening of Mirzachowki to Boarijor Road",
@@ -60,6 +63,8 @@ const ongoingProjects: Project[] = [
     client:
       "Jharkhand State Building Construction Corporation Limited (JSBCCL)",
     image: "/1.jpg",
+    cost: "₹ 9,24,27,983.10",
+
   },
   {
     title: "Community Health Centre Garhwa",
@@ -68,6 +73,8 @@ const ongoingProjects: Project[] = [
     client:
       "Jharkhand State Building Construction Corporation Limited (JSBCCL)",
     image: "/22.jpg",
+    cost: "₹ 9,23,84,444",
+
   },
 ];
 
