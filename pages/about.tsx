@@ -254,7 +254,7 @@ export default function AboutPage() {
   <h3 className="text-xl font-semibold text-blue-600 mb-2">
     John Doe
   </h3>
-  <p className="text-gray-700 font-medium">Chairman & CEO</p>
+  <p className="text-gray-700 font-medium">Chairman (MD)</p>
 </div>
 
             </div>
@@ -273,9 +273,8 @@ export default function AboutPage() {
               />
               <div className="mt-4 p-4 bg-white border-l-4 border-blue-500 rounded-md shadow-md">
                 <h3 className="text-xl font-semibold text-blue-600">
-                  John Doe
-                </h3>
-                <p className="text-gray-700">Manager</p>
+Gopal Singh                </h3>
+                <p className="text-gray-700">General Manager (GM)</p>
               </div>
             </div>
             <div className="md:w-1/2 pr-2 border-r-4 border-blue-500 pl-4">
