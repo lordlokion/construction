@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  User,
   Award,
   Globe,
   MapPin,
@@ -53,22 +52,28 @@ interface CompanyValueCardProps {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Alice Johnson",
-    role: "Founder & CEO",
-    bio: "Alice has over 20 years of experience in the construction industry and leads our team with passion and expertise.",
-    icon: <User className="w-8 h-8" />,
+    name: "Mr. Seth Kumar",
+    role: "Chairman & MD",
+    bio: "Mr seth has over 20 years of experience in the construction industry and leads our team with passion and expertise.",
+    icon: (
+      <Image
+        src="/MD2.png"
+        alt="Mr. Seth Kumar"
+        className="w-24 h-24 rounded-full"
+      />
+    ),
   },
   {
-    name: "Bob Smith",
-    role: "Lead Architect",
-    bio: "Bob is known for his innovative designs and attention to detail, ensuring every project meets the highest standards.",
-    icon: <User className="w-8 h-8" />,
-  },
-  {
-    name: "Claire Davis",
-    role: "Project Manager",
-    bio: "Claires exceptional organizational skills and dedication ensure projects run smoothly and efficiently.",
-    icon: <User className="w-8 h-8" />,
+    name: "Mr. Gopal Singh",
+    role: "General Manager",
+    bio: "Mr Gopal is known for his innovative designs and attention to detail, ensuring every project meets the highest standards.",
+    icon: (
+      <Image
+        src="/GM1.png"
+        alt="Mr. Gopal Singh"
+        className="w-24 h-24 rounded-full"
+      />
+    ),
   },
 ];
 
@@ -104,7 +109,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => (
   <Card>
     <CardContent className="p-6 text-center">
       <div className="mb-4">
-        <span className="inline-block p-3 rounded-full bg-orange-100 text-orange-500">
+        <span className="inline-block text-orange-500">
           {member.icon}
         </span>
       </div>
@@ -250,13 +255,12 @@ export default function AboutPage() {
                 height={300}
                 className="rounded-lg"
               />
-             <div className="mt-4 p-6 bg-white rounded-md shadow-md border-l-4 border-blue-500">
-  <h3 className="text-xl font-semibold text-blue-600 mb-2">
-  Mr. Seth Kumar
-  </h3>
-  <p className="text-gray-700 font-medium">Chairman (MD)</p>
-</div>
-
+              <div className="mt-4 p-6 bg-white rounded-md shadow-md border-l-4 border-blue-500">
+                <h3 className="text-xl font-semibold text-blue-600 mb-2">
+                  Mr. Seth Kumar
+                </h3>
+                <p className="text-gray-700 font-medium">Chairman (MD)</p>
+              </div>
             </div>
           </div>
         </section>
@@ -273,7 +277,8 @@ export default function AboutPage() {
               />
               <div className="mt-4 p-4 bg-white border-l-4 border-blue-500 rounded-md shadow-md">
                 <h3 className="text-xl font-semibold text-blue-600">
-Mr. Gopal Singh                </h3>
+                  Mr. Gopal Singh{" "}
+                </h3>
                 <p className="text-gray-700">General Manager (GM)</p>
               </div>
             </div>
@@ -316,7 +321,6 @@ Mr. Gopal Singh                </h3>
                 of progress. Today, we stand as builders of not just structures,
                 but legacies that inspire and endure.
               </p>
-             
             </div>
             <div className="md:w-1/2">
               <Image
@@ -332,7 +336,7 @@ Mr. Gopal Singh                </h3>
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
