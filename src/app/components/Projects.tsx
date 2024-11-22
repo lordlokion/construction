@@ -82,14 +82,12 @@ const AnimatedProjects: React.FC = () => {
   const projects: ProjectData[] = [
     
     {
-      title: "Widening of Mirzachowki to Boarijor Road",
-      description:
-        "Ongoing road construction project improving connectivity in Jharkhand.",
-      date: "Ongoing",
-      client: "Road Construction Department",
-      length: "16.97 KM",
-      cost: "₹ 760,489,059.27",
-      image: "/img1.jpeg",
+      title: "Widening & Strengthening of NH-100 to Nawadih Road",
+      description: "Successfully completed road project enhancing connectivity.",
+      date: "Completed",
+      client: "Road Construction Department (RCD)",
+      length: "17.60 KM",
+      image: "/img4.jpeg",
     },
     
     {
